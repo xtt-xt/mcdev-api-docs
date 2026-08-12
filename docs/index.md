@@ -1,0 +1,40 @@
+---
+layout: home
+
+hero:
+  name: "MCDev API Docs"
+  text: "网易我的世界开发者平台<br>非官方 API 文档"
+  tagline: 基于 BitterLemonn/MCDevManager 与官方网页版逆向整理的接口文档<br>作品管理 · 商品管理 · 收益查询 · 数据分析
+  image:
+    src: /favicon.svg
+    alt: MCDev
+  actions:
+    - theme: brand
+      text: 快速开始
+      link: /guide/quickstart
+    - theme: alt
+      text: API 参考
+      link: /api/overview
+    - theme: alt
+      text: 项目介绍
+      link: /guide/intro
+
+features:
+  - icon: 📦
+    title: 作品全流程管理
+    details: 上传、更新、自测、取消自测、提交/取消审核、上架、定时上架、删除作品
+  - icon: 🛒
+    title: 商品（增值内容）管理
+    details: 商品列表、自测/取消自测、上架/下架、提交/撤销审核、删除商品、分组管理
+  - icon: 💰
+    title: 收益与激励
+    details: 收益列表、提现申请、提现详情、激励基金查询
+  - icon: 📊
+    title: 数据分析
+    details: 数据总览、日/月度详情、单作品实时收益
+  - icon: 🔐
+    title: 登录认证
+    details: 邮箱密码 RSA 加密登录、Cookie 会话管理
+  - icon: 📤
+    title: 文件上传
+    details: 资源包/图片上传，支持网易文件服务器签名路由

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="4" y="4" width="56" height="56" rx="8" fill="#2f6f3f"/>
+  <rect x="14" y="14" width="16" height="16" rx="2" fill="#7fae8f"/>
+  <rect x="34" y="14" width="16" height="16" rx="2" fill="#c8e6c9"/>
+  <rect x="14" y="34" width="16" height="16" rx="2" fill="#c8e6c9"/>
+  <rect x="34" y="34" width="16" height="16" rx="2" fill="#7fae8f"/>
+  <text x="32" y="41" font-family="sans-serif" font-size="9" fill="#1b3a24" text-anchor="middle" font-weight="bold">API</text>
+</svg>
