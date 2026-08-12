@@ -33,4 +33,3 @@
 ## 相关项目
 
 - [Nemo-Mobile-Mod-Studio](https://github.com/xtt-xt/Nemo-Mobile-Mod-Studio)：网易基岩版 Minecraft 可视化模组制作工具（Android）
-- [ore-ui-for-android](https://github.com/xtt-xt/ore-ui-for-android)：Android UI 控件库
