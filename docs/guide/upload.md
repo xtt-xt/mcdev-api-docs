@@ -41,28 +41,41 @@ Content-Type: multipart/form-data
 5. token 解析失败时回退默认地址 `https://fp.ps.netease.com/x19/file/new/`
 
 ## 获取文件 token
-
 ```
 GET https://mc-launcher.webapp.163.com/filepicker/file_token
 ```
-
+| 参数 | 类型 | 说明 |
+|---|---|---|
+| `file_type` | string | 文件用途：`zip_package`（作品资源包，路由到 `pfp.ps.netease.com`）、`image`（宣传图/授权图）、`video`（宣传视频） |
+| `secure` | bool | 是否安全模式，默认 `false` |
 ```json
 {
   "status": "ok",
   "data": {
-    "token": "Policy abc123:eyJ1cmwiOiJodHRwczovL3BmcC5wc..."
+    "token": "Policy abc123:eyJ1cmwiOiJodHRwczovL3BmcC5wc...",
+    "file_type": "zip_package",
+    "secure": false
   }
 }
 ```
+> 不同 `file_type` 的 token 内 `url` 路由不同：`zip_package` → `pfp.ps.netease.com`；`image`/`video` → `fp.ps.netease.com`。
 
-## 响应结构
-
+## 上传回执（FileInfoDTO）
+上传完成后得到回执对象，用于填入 `WorkCreateDTO.res[].res_url` / `channel[].channel_url` / `video_info_list`：
 ```json
 {
   "body": "<文件服务器返回的JSON文本>",
+  "file_type": "zip_package",
   "sign": "<x-ntes-signature 响应头值>"
 }
 ```
+| 字段 | 说明 |
+|---|---|
+| `body` | 上传响应体（`<textarea>` 包裹的 JSON 文本），内含文件最终 URL |
+| `file_type` | 与请求 `file_type` 一致 |
+| `sign` | 响应头 `x-ntes-signature` 值，文件签名 |
+
+> 新建作品时 `res_url`/`channel_url` 传 FileInfoDTO 对象；**更新**作品时则传 URL 字符串（从详情 `res[].res_url` 取）。
 
 ## 注意
 
